@@ -40,6 +40,7 @@ namespace MonkeyStatuts {
         PowerMate _powerMate;
         MethodInvoker^ _refreshDelegate;
         System::Drawing::Font _drawingFont;
+        GrowlNotifier _notifier;
 
 
 	protected:
@@ -124,6 +125,7 @@ namespace MonkeyStatuts {
         void PowerMateButtonDownPressed()
         {
             ThreadSafeRefresh();
+            _notifier.SendNotification();
         }
     private: System::Void Form1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) 
              {

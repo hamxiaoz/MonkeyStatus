@@ -193,13 +193,9 @@
 			RelativePath="..\Dependancy\Zurassic.USB.dll"
 			AssemblyName="Zurassic.USB, Version=1.0.4273.14997, processorArchitecture=x86"
 		/>
-		<AssemblyReference
-			RelativePath="..\Dependancy\Growl.Connector.dll"
-			AssemblyName="Growl.Connector, Version=2.0.0.0, PublicKeyToken=980c2339411be384, processorArchitecture=MSIL"
-		/>
-		<AssemblyReference
-			RelativePath="..\Dependancy\Growl.CoreLibrary.dll"
-			AssemblyName="Growl.CoreLibrary, Version=2.0.0.0, PublicKeyToken=13e59d82e007b064, processorArchitecture=MSIL"
+		<ProjectReference
+			ReferencedProjectIdentifier="{E83F92F8-7397-41CC-BDD0-355109B7C38E}"
+			RelativePathToProject=".\GrowlNotifier\GrowlNotifier.csproj"
 		/>
 	</References>
 	<Files>

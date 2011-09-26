@@ -3,16 +3,44 @@ Microsoft Visual Studio Solution File, Format Version 9.00
 # Visual Studio 2005
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MonkeyStatuts", "MonkeyStatuts\MonkeyStatuts.vcproj", "{80D3434F-9F3D-4E58-9CF7-30C9B5154660}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowlNotifier", "GrowlNotifier\GrowlNotifier.csproj", "{E83F92F8-7397-41CC-BDD0-355109B7C38E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependency", "Dependency", "{BD2C1F18-F09E-46A5-AC61-FEF60CCAF898}"
+	ProjectSection(SolutionItems) = preProject
+		Dependancy\Growl.Connector.dll = Dependancy\Growl.Connector.dll
+		Dependancy\Growl.CoreLibrary.dll = Dependancy\Growl.CoreLibrary.dll
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|Win32 = Debug|Win32
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Debug|Mixed Platforms.ActiveCfg = Debug|Win32
+		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Debug|Mixed Platforms.Build.0 = Debug|Win32
 		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Debug|Win32.ActiveCfg = Debug|Win32
 		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Debug|Win32.Build.0 = Debug|Win32
+		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Release|Any CPU.ActiveCfg = Release|Win32
+		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Release|Mixed Platforms.ActiveCfg = Release|Win32
+		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Release|Mixed Platforms.Build.0 = Release|Win32
 		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Release|Win32.ActiveCfg = Release|Win32
 		{80D3434F-9F3D-4E58-9CF7-30C9B5154660}.Release|Win32.Build.0 = Release|Win32
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{E83F92F8-7397-41CC-BDD0-355109B7C38E}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
