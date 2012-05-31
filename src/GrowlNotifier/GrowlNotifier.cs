@@ -29,11 +29,14 @@ namespace Zurassic
 
         public void SendNotification()
         {
+            // TODO: deal with the situation when Growl is not running by adding a timeout for every notification.
             if (!_isNotificationActive)
             {
                 CallbackContext callbackContext = new CallbackContext("some fake information", "fake data");
 
-                Notification notification = new Notification(this.application.Name, this.notificationType.Name, DateTime.Now.Ticks.ToString(), "title", "content");
+                Notification notification = new Notification(this.application.Name, this.notificationType.Name,
+                                                             DateTime.Now.Ticks.ToString(), "usb",
+                                                             "Knock, Knock");
                 _isNotificationActive = true;
                 this.growl.Notify(notification, callbackContext);
             }

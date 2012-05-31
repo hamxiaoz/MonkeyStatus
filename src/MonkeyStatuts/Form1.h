@@ -40,7 +40,8 @@ namespace MonkeyStatuts {
         PowerMate _powerMate;
         MethodInvoker^ _refreshDelegate;
         System::Drawing::Font _drawingFont;
-        GrowlNotifier _notifier;
+    private: System::Windows::Forms::NotifyIcon^  notifyIcon1;
+             GrowlNotifier _notifier;
 
 
 	protected:
@@ -54,6 +55,8 @@ namespace MonkeyStatuts {
 				delete components;
 			}
 		}
+    private: System::ComponentModel::IContainer^  components;
+    protected: 
 
     protected: 
 
@@ -62,7 +65,7 @@ namespace MonkeyStatuts {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -71,7 +74,14 @@ namespace MonkeyStatuts {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+            this->components = (gcnew System::ComponentModel::Container());
+            this->notifyIcon1 = (gcnew System::Windows::Forms::NotifyIcon(this->components));
             this->SuspendLayout();
+            // 
+            // notifyIcon1
+            // 
+            this->notifyIcon1->Text = L"notifyIcon1";
+            this->notifyIcon1->Visible = true;
             // 
             // Form1
             // 
@@ -80,6 +90,8 @@ namespace MonkeyStatuts {
             this->ClientSize = System::Drawing::Size(172, 132);
             this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::None;
             this->Name = L"Form1";
+            this->ShowIcon = false;
+            this->ShowInTaskbar = false;
             this->Text = L"Form1";
             this->TopMost = true;
             this->TransparencyKey = System::Drawing::SystemColors::Control;
@@ -124,7 +136,7 @@ namespace MonkeyStatuts {
 
         void PowerMateButtonDownPressed()
         {
-            ThreadSafeRefresh();
+            //ThreadSafeRefresh();
             _notifier.SendNotification();
         }
     private: System::Void Form1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) 
